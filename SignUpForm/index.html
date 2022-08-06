@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="container-left">
+                <div class="logo">
+                    <img src="odin-lined.png" alt="">
+                    <p>ODIN</p>
+                </div>
+                
+            </div>
+            <div class="container-right">
+
+                <div class="top">
+                    <div class="top-text">
+                        <p>This is not a real online service! You know you need something like this in your life to help
+                            you realize your deepest dreams.</p>
+                        <p>Sign up <i>now</i> to get started</p>
+                        <br>
+                        <p>You <i>know</i> you want to.</p>
+                    </div>
+
+
+
+                </div>
+                <section class="mid">
+                    <div class="top-form">
+
+                        <form action="" class="form" onsubmit="return verify()">
+
+                            <div class="form-container">
+                                <p class="form-title">Let's do this</p>
+                                <ul class="form-list">
+
+                                    <li>
+                                        <label for="firstName">FIRST NAME</label>
+                                        <input type="text" name="first-name" id="firstName" placeholder="First Name" minlength="2" maxlength="50" oninvalid="this.setCustomValidity('First Name must be atleast 2 letters')"
+                                        oninput="this.setCustomValidity('')">
+                                    </li>
+                                    <li>
+                                        <label for="lastName">LAST NAME</label>
+                                        <input type="text" name="last-name" id="lastName" minlength="2" maxlength="50" oninvalid="this.setCustomValidity('Last name must be atleast 2 letters')"
+                                        oninput="this.setCustomValidity('')">
+                                    </li>
+                                    <li>
+                                        <label for="email">EMAIL</label>
+                                        <input type="email" name="email" id="email" oninvalid="this.setCustomValidity('Enter proper email address')"
+                                        oninput="this.setCustomValidity('')">
+                                    </li>
+                                    <li>
+                                        <label for="phoneNumber">PHONE NUMBER</label>
+                                        <input type="number" name="phone-number" id="phoneNumber" min="100000000" max="99999999999999" oninvalid="this.setCustomValidity('Number must be 9 to 14 chracters')"
+                                        oninput="this.setCustomValidity('')">
+                                    </li>
+                                    <li>
+                                        <label for="inputPassword">PASSWORD</label>
+                                        <input type="password" name="password" id="inputPassword" minlength="5">
+                                        <span id="passwordMatch">* Password do not match</span>
+                                    </li>
+                                    <li>
+                                        <label for="inputConfirmPassword">CONFIRM PASSWORD</label>
+                                        <input type="password" name="confirm-password" id="inputConfirmPassword">
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="submit" value="Create Account" id="btnSubmit">
+                        </form>
+                    </div>
+                </section>
+                <section class="bottom">
+                    <div class="bottom-text">
+                        <p>Already have an account?</p>
+                        <a href="" id="log-in">Log in</a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

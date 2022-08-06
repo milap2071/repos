@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+:root {
+  --right-container-margin: 0 200px 0 100px;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: Norse-Bold;
+  src: url(Norse-Bold.otf);
+}
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.container-left {
+  position: relative;
+  background: url(halie-west-25xggax4bSA-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+}
+.container-left .logo {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  flex: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0deg, 0%, 0%, 0.4);
+}
+.container-left .logo img {
+  height: 150px;
+  width: 150px;
+}
+.container-left .logo p {
+  font-family: Norse-Bold;
+  font-size: 8em;
+  color: white;
+}
+
+.container-right {
+  width: 60%;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 1.3fr;
+  row-gap: 25px;
+}
+
+.top {
+  position: relative;
+}
+.top .top-text {
+  position: relative;
+  top: 5em;
+  margin: 0 100px 0 100px;
+}
+.top .top-text p {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.mid .form .form-container {
+  background-color: #fff;
+  padding: 0 250px 0 100px;
+  box-shadow: 0px 11px 9px -2px rgba(0, 0, 0, 0.1);
+}
+.mid .form .form-container .form-title {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.mid .form .form-container .form-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1rf;
+}
+.mid .form .form-container .form-list li {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px 50px 10px 0;
+}
+.mid .form .form-container .form-list li label {
+  font-size: 1em;
+  font-weight: 600;
+}
+.mid .form .form-container .form-list li input {
+  font-size: 1.2em;
+  border: 1px solid hsla(300deg, 2%, 10%, 0.2);
+  border-radius: 3px;
+  padding: 5px;
+  outline: none;
+}
+.mid .form .form-container .form-list li input:invalid {
+  border: 1px solid hsla(0deg, 100%, 50%, 0.925);
+}
+.mid .form .form-container .form-list li input:invalid + span {
+  visibility: visible;
+}
+.mid .form .form-container .form-list li input:focus {
+  border: 1px solid hsla(240deg, 100%, 50%, 0.925);
+  box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.mid .form .form-container .form-list li input:focus:invalid {
+  border: 1px solid hsla(240deg, 100%, 50%, 0.925);
+}
+.mid .form .form-container .form-list li input:focus:invalid + span {
+  visibility: hidden;
+}
+.mid .form .form-container .form-list li input + span {
+  visibility: hidden;
+  color: red;
+}
+.mid .form #btnSubmit {
+  margin: var(--right-container-margin);
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 180px;
+  height: 40px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  background-color: #596d48;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bottom {
+  position: relative;
+}
+.bottom .bottom-text {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  margin: var(--right-container-margin);
+  column-gap: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.bottom .bottom-text a {
+  color: #596d48;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bottom .bottom-text a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
