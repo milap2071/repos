@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container top-container">
+      <h1>Etch-A-Sketch</h1>
+      <div class="btn-container">
+        <label for="">Choose Grid Layout: </label>
+        <select name="select-size" id="selectSize">
+          <option value="4">4x4</option>
+          <option value="8">8x8</option>
+          <option value="12">12x12</option>
+          <option value="16">16x16</option>
+        </select>
+
+        <button id="btnCreate">Create</button>
+      </div>
+      <div class="style-container">
+        <label for="">Select Style: </label>
+        
+          <input type="radio" name="hover-style" id="bw" checked/>
+          <label for="bw">B/W</label>
+
+          <input type="radio" name="hover-style" id="rainbow" />
+          <label for="rainbow">Rainbow </label>
+
+          <input type="radio" name="hover-style" id="darken">
+          <label for="darken">Darken</label>
+        
+        <button id="btnClear">Clear</button>
+      </div>
+    </div>
+
+    <div class="container mid-container" id="grid-container">
+      <!-- <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div>
+        <div class="grid-box">A</div> -->
+    </div>
+  </body>
+</html>

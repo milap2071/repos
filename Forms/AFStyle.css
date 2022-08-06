@@ -1,0 +1,154 @@
+input {
+    appearance: none;
+}
+
+/* for safari */
+input[type="search"] {
+    appearance: none;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.2em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+    /* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+select {
+    appearance: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 6px;
+    right: 10px;
+    position: absolute;
+}
+
+/* FORM 2
+========================= */
+input:required {
+    border: 1px solid black;
+}
+
+input:optional {
+    border: 1px solid silver;
+}
+
+input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+fieldset>div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+input+span {
+    position: relative;
+}
+
+input:required+span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px;
+}
+
+input+span {
+    position: relative;
+}
+
+input+span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:invalid+span::before {
+    content: '✖';
+    color: red;
+}
+
+input:valid+span::before {
+    content: '✓';
+    color: green;
+}
+
+input + span {
+    position: relative;
+  }
+  
+  input + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    padding: 5px 10px;
+    top: -26px;
+  }
+  
+  input:required + span::after {
+    color: white;
+    background-color: black;
+    content: "Required";
+    left: -70px;
+  }
+  
+  input:out-of-range + span::after {
+    color: white;
+    background-color: red;
+    width: 155px;
+    content: "Outside allowable value range";
+    left: -182px;
+  }
